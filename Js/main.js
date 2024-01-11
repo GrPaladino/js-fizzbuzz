@@ -8,21 +8,25 @@
 const boxContainer = document.getElementById("box-container");
 
 for (let i = 1; i <= 100; i++) {
-  //   let textBox = "";
+  const boxElement = document.createElement("div");
+  boxElement.classList.add("box");
 
-  boxContainer.innerHTML += `
+  let textBox = i;
+
+  if (i % 15 == 0) {
+    textBox = "Fizzbuzz";
+  } else if (i % 5 == 0) {
+    textBox = "Buzz";
+  } else if (i % 3 == 0) {
+    textBox = "Fizz";
+  }
+
+  boxElement.innerHTML += `
   <div class="box"> 
-    <h3>
-        ${i}
-    </h3>
+  <h3>
+  ${textBox}
+  </h3>
   </div>`;
-  console.log(boxContainer);
 
-  //   if (i % 15 == 0) {
-  //     textBox = "Fizzbuzz";
-  //   } else if (i % 5 == 0) {
-  //     textBox = "Buzz";
-  //   } else if (i % 3 == 0) {
-  //     textBox = "Fizz";
-  //   }
+  boxContainer.append(boxElement);
 }
