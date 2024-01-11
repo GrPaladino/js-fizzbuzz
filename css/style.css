@@ -1,0 +1,26 @@
+body {
+  background-color: #083b4c;
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+#box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1389b2;
+  border: 2px solid currentColor;
+}
