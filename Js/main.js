@@ -8,25 +8,21 @@
 const boxContainer = document.getElementById("box-container");
 
 for (let i = 1; i <= 100; i++) {
-  const boxElement = document.createElement("div");
-  boxElement.classList.add("box");
-
   let textBox = i;
 
   if (i % 15 == 0) {
-    textBox = "Fizzbuzz";
+    textBox = "FizzBuzz";
+    // boxElement.style.backgroundColor = "#f0456e";
   } else if (i % 5 == 0) {
     textBox = "Buzz";
   } else if (i % 3 == 0) {
     textBox = "Fizz";
   }
 
-  boxElement.innerHTML += `
-  <div class="box"> 
+  boxContainer.innerHTML += `
+  <div class="box ${textBox}"> 
   <h3>
   ${textBox}
   </h3>
   </div>`;
-
-  boxContainer.append(boxElement);
 }

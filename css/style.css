@@ -24,3 +24,15 @@ h1 {
   background-color: #1389b2;
   border: 2px solid currentColor;
 }
+
+.FizzBuzz {
+  background-color: #f0456e;
+}
+
+.Buzz {
+  background-color: #ffd166;
+}
+
+.Fizz {
+  background-color: #0ad6a1;
+}
